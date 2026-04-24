@@ -7,10 +7,62 @@ packages:
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mysql
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:TestDBConn
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.kvv_2404_fedtest.integrations:SIQAAdapterFlow
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.kvv_2404_fedtest.integrations:refdaf
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.kvv_2404_fedtest.referencedata:ref1
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   jdbc.Embedded-Database-Pool.waitingThread: "0"
   jdbc.SAP-TxStore-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP-TxStore-Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.password
+  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.keyStore
+  : ""
   jdbcfunc.SAPTxStore.failFastMode: false
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.serverName
+  : 9.46.196.248
   jdbcfunc.Xref.failFastMode: true
   jdbcfunc.ISDashboardStats.connPoolAlias: Embedded-Database-Pool
   jdbc.SAP-TxStore-Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
@@ -18,8 +70,20 @@ configurationVariables:
   jdbc.Embedded-Database-Pool.userid: APP
   jdbcfunc.ISInternal.connPoolAlias: Embedded-Database-Pool
   jdbc.Embedded-Database-Pool.password: "{AES}Zcw2EXTJgNDVmVzJO2Y3Bw=="
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.user
+  : siqatest
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.minimumPoolSize
+  : "1"
   jdbc.SAP-TxStore-Pool.userid: root
   jdbc.Embedded-Database-Pool.snoopenabled: "false"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
   jdbc.SAP-TxStore-Pool.snoopenabled: "false"
   jdbc.Embedded-Database-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/Embedded-Database-Pool.log;ddtdbg.ProtocolTraceShowTime=true
   jdbcfunc.ISInternal.failFastMode: true
@@ -30,18 +94,44 @@ configurationVariables:
   jdbc.Embedded-Database-Pool.minConns: "0"
   jdbc.Embedded-Database-Pool.driverAlias: Embedded Database Driver
   jdbc.Embedded-Database-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/Embedded-Database-Pool.log;logTName=yes;timestamp=yes)
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.blockingTimeout
+  : "1000"
   jdbc.Embedded-Database-Pool.dbURL: jdbc:derby:embedded;create=true
   jdbc.SAP-TxStore-Pool.useSSL: "false"
   jdbcfunc.SAPTxStore.connPoolAlias: SAP-TxStore-Pool
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.databaseName
+  : MYSQL_DATABASE
   jdbcfunc.ISDashboardStats.failFastMode: false
   jdbc.Embedded-Database-Pool.spyenabled: "false"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.driverType
+  : mysql
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionEnabled
+  : "false"
   jdbc.SAP-TxStore-Pool.poolThreshold: "0"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
   jdbc.SAP-TxStore-Pool.expireTime: "60000"
   jdbc.SAP-TxStore-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP-TxStore-Pool.log;logTName=yes;timestamp=yes)
   jdbc.SAP-TxStore-Pool.minConns: "5"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.dbType
+  : MySQL
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.expireTimeout
+  : "1000"
   jdbc.SAP-TxStore-Pool.description: Connection Pool for the SAP Transaction Store
   jdbc.SAP-TxStore-Pool.spyenabled: "false"
   jdbc.SAP-TxStore-Pool.maxConns: "10"
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.heartBeatInterval
+  : "0"
   jdbc.Embedded-Database-Pool.poolThreshold: "0"
   jdbc.SAP-TxStore-Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
   jdbc.SAP-TxStore-Pool.driverAlias: MySQL CC Driver
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.trustStore
+  : ""
+  ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.startupRetryCount
+  : "0"
