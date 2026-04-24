@@ -12,12 +12,20 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: WmSalesforceRESTProvider
+  version: 12.0.0.0.11
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
+- name: TPP_services_in_FCS
+  gitServerName: kvv
+  gitUrl: https://github.com/Karthik-V-IBM-10
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
 services:
 - serviceName: project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:mysql
   packages:
   - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -29,6 +37,8 @@ services:
   packages:
   - name: Kvv_2404_FedTestProject
     version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -39,15 +49,7 @@ services:
   packages:
   - name: Kvv_2404_FedTestProject
     version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
-  - name: WmSalesforceRESTProvider
-    version: 12.0.0.0.11
-- serviceName: project.kvv_2404_fedtest.integrations:SIQAAdapterFlow
-  packages:
-  - name: Kvv_2404_FedTestProject
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -55,9 +57,83 @@ services:
     wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:AlertsCRTandERT
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: pub.alert:emit
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: project.kvv_2404_fedtest.integrations:SIQAAdapterFlow
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:Sum
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: project.kvv_2404_fedtest.integrations:deepclonetest
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: pub.string:stringToBytes
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: pub.utils:deepClone
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: pub.string:bytesToString
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
 - serviceName: project.kvv_2404_fedtest.integrations:refdaf
   packages:
   - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -68,6 +144,32 @@ services:
 - serviceName: project.kvv_2404_fedtest.referencedata:ref1
   packages:
   - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:sfREST
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.operations.actions:restAction
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -101,6 +203,8 @@ configurationVariables:
   jdbc.SAP-TxStore-Pool.waitingThread: "10"
   jdbc.Embedded-Database-Pool.expireTime: "60000"
   jdbc.Embedded-Database-Pool.useSSL: "false"
+  ? iscloudstreamsconnectorservice.project..kvv_2404_fedtest..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:restAction.virtualServiceName
+  : WmCloudStreams.RestVS
   jdbc.Embedded-Database-Pool.driverAlias: Embedded Database Driver
   jdbc.Embedded-Database-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/Embedded-Database-Pool.log;logTName=yes;timestamp=yes)
   ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.blockingTimeout
@@ -231,6 +335,8 @@ configurationVariables:
   : "30000"
   ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionManagerSettings.heartBeatInterval
   : "0"
+  ? iscloudstreamsconnectorservice.project..kvv_2404_fedtest..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:restAction.connectionAlias
+  : project.kvv_2404_fedtest.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:rest2404
   ? cloudstreamsconnection.project..kvv_2404_fedtest..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:rest2404.cn.enableCompression
   : "false"
   ? cloudstreamsconnection.project..kvv_2404_fedtest..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:rest2404.poolIncrementSize
