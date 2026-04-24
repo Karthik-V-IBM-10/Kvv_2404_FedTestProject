@@ -1,0 +1,25 @@
+version: "1.0"
+projectName: Kvv_2404_FedTestProject
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: cdtWorkflow
+    type: workflow
+    uid: fl5392517c197c4a119cfdf86d027ef50e
+    stepId: a0
+    reference: project.kvv_2404_fedtest.integrations:Sum
+  - name: cdtWorkflow
+    type: workflow
+    uid: fl5392517c197c4a119cfdf86d027ef50e
+    stepId: a1
+    reference: services:addInts
+  - name: cdtWorkflow
+    type: workflow
+    uid: fl5392517c197c4a119cfdf86d027ef50e
+    stepId: a2
+    reference: project.kvv_2404_fedtest.integrations:deepclonetest
+  - name: cdtWorkflow
+    type: workflow
+    uid: fl5392517c197c4a119cfdf86d027ef50e
+    stepId: a3
+    reference: project.kvv_2404_fedtest.integrations:tppdaf
