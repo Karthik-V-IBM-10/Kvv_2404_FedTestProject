@@ -22,8 +22,14 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: JMS2waySSL
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/prabhakarsag
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
+- name: SSL_JDBC_Test
+  gitServerName: kvv
+  gitUrl: https://github.com/prabhakaribm
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 services:
@@ -34,6 +40,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -47,6 +55,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
@@ -58,6 +68,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -71,11 +83,35 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: pub.alert:emit
+  packages:
+  - name: WmPublic
+    version: 12.0.0.0.829
+- serviceName: project.kvv_2404_fedtest.integrations:JMS_JNDI_SSL
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: jms2wayssl_publisher:jms2wayssl_publisher
+  packages:
+  - name: JMS2waySSL
+    version: "1.0"
+- serviceName: pub.jms:send
   packages:
   - name: WmPublic
     version: 12.0.0.0.829
@@ -86,6 +122,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -98,6 +136,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -118,6 +158,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -143,6 +185,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
@@ -154,6 +198,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -167,6 +213,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
@@ -178,6 +226,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -191,6 +241,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
@@ -202,6 +254,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
@@ -215,6 +269,8 @@ services:
     version: "1.0"
   - name: JMS2waySSL
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
   - name: WmSalesforceRESTProvider
@@ -226,6 +282,8 @@ services:
   - name: TPP_services_in_FCS
     version: "1.0"
   - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
