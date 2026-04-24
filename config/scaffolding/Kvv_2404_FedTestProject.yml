@@ -16,8 +16,14 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: TPP_services_in_FCS
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/Karthik-V-IBM-10
+  gitUsername: Karthik-V-IBM-10
+  gitBranch: main
+- name: JMS2waySSL
+  gitServerName: kvv
+  gitUrl: https://github.com/prabhakarsag
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 services:
@@ -27,10 +33,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:TestDBConn
@@ -39,10 +45,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:rest2404
@@ -51,10 +57,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.integrations:AlertsCRTandERT
@@ -63,10 +69,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: pub.alert:emit
@@ -79,10 +85,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.integrations:Sum
@@ -91,10 +97,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: pub.math:addInts
@@ -111,10 +117,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: pub.string:stringToBytes
@@ -129,16 +135,40 @@ services:
   packages:
   - name: WmPublic
     version: 12.0.0.0.829
+- serviceName: project.kvv_2404_fedtest.integrations:doUntilDADA
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:ifElseDADA
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.integrations:refdaf
   packages:
   - name: Kvv_2404_FedTestProject
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.referencedata:ref1
@@ -147,10 +177,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.integrations:sfREST
@@ -159,10 +189,10 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
 - serviceName: project.kvv_2404_fedtest.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.operations.actions:restAction
@@ -171,12 +201,40 @@ services:
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:switchCaseDADA
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: project.kvv_2404_fedtest.integrations:tppdaf
+  packages:
+  - name: Kvv_2404_FedTestProject
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.11
+- serviceName: services:add3Ints
+  packages:
+  - name: TPP_services_in_FCS
+    version: "1.0"
 configurationVariables:
   jdbc.Embedded-Database-Pool.waitingThread: "0"
   ? artConnection.Kvv_2404_FedTestProject.project.kvv_2404_fedtest.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.mysql.connectionSettings.password
